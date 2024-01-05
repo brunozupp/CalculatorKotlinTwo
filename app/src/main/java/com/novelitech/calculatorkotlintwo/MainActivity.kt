@@ -16,10 +16,48 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        println("MÉTODOOOOOOOOOOOOOO: onCreate")
+
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
 //        setContentView(R.layout.activity_main)
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        println("MÉTODOOOOOOOOOOOOOO: onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        println("MÉTODOOOOOOOOOOOOOO: onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        println("MÉTODOOOOOOOOOOOOOO: onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        println("MÉTODOOOOOOOOOOOOOO: onStop")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+
+        println("MÉTODOOOOOOOOOOOOOO: onRestart")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        println("MÉTODOOOOOOOOOOOOOO: onDestroy")
     }
 
     fun numberAction(view: View) {
@@ -96,8 +134,6 @@ class MainActivity : ComponentActivity() {
                 if(operator == '+') {
                     result += nextDigit
                 }
-
-//                println("AQUIIIIIIIIII ${operator == "-"}")
 
                 if(operator == '-') {
                     result -= nextDigit
